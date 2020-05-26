@@ -25,7 +25,7 @@ class Rectangle
 			}
 		}
 		
-		void setbreadth( float b ) {
+		void setBreadth( float b ) {
 			if ( b >= 0 ) {
 				breadth = b ;
 			}
@@ -66,7 +66,7 @@ int main() {
 	cin >> B ;
 	
 	r.setLength( L ) ;
-	r.setbreadth( B ) ;
+	r.setBreadth( B ) ;
 	
 	cout << "\nThe length is = " << r.getLength() << endl ;
 	cout << "The breadth is = " << r.getBreadth() << endl ;
