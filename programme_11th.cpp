@@ -9,8 +9,8 @@ class complex {
 		int img ;
 		
 		complex( int r=0 , int i=0 ) {
-			r = real ;
-			i = img ;
+			real = r ;
+			img = i ;
 		}
 		
 		complex operator+( complex x ) {
