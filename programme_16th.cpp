@@ -35,6 +35,12 @@ class Rectangle {
 		float diagonal() {
 			return ( sqrt( ( length*length ) + ( breadth*breadth ) ) ) ;
 		}
+		bool isSquare() {
+			length == breadth ;
+		}
+		~Rectangle() {
+			cout << "\nThe given rectangle is destroyed " << endl ;
+		}
 };
 
 class Cuboid : public Rectangle {
@@ -64,6 +70,12 @@ class Cuboid : public Rectangle {
 		}
 		float tot_s_area() {
 			return ( 2 * ( ( getLength() * getBreadth() ) + ( getBreadth() * height ) + ( getLength() * height ) ) ) ;
+		}
+		bool isCube() {
+			getLength() == getBreadth() && getLength() == height && getBreadth() == height ;
+		}
+		~Cuboid() {
+			cout << "\nThe given cuboid is destroyed " << endl ;
 		}	
 };
 
@@ -82,6 +94,9 @@ int main() {
 	cout << "The area of rectangle is = " << R.area() << endl ;
 	cout << "The perimeter of rectangle is = " << R.perimeter() << endl ;
 	cout << "The diagonal of rectangle is = " << R.diagonal() << endl ;
+	if ( R.isSquare() ) {
+		cout << "The given rectangle is also a SQUARE " << endl ; 
+	}
 	
 	cout << "\n\n\n" << endl ;
 	Cuboid C ;
@@ -103,6 +118,9 @@ int main() {
 	cout << "The curved surface area of cuboid is = " << C.curv_s_area() << endl ;
 	cout << "The total surface area of cuboid is = " << C.tot_s_area() << endl ;
 	cout << "The volume of cuboid is = " << C.volume() << endl ;
+	if ( C.isCube() ) {
+		cout << "The given cuboid is also a CUBE " << endl ;
+	}
 	
 	return 0 ;
 }
